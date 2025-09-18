@@ -609,8 +609,41 @@ footer {
 .is-close {
   display: none;
 }
+.social-wrapper .social:hover {
+  background-color: green;
+}
+.normal {
+  width: 360px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.normal img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-@media (width >= 768px) {
+.normal .hover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #404bbf;
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+}
+.normal:hover .hover {
+  transform: translateY(0);
+}
+
+.menu li.active a::after {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
   body {
     width: 100%;
     max-width: 100%;
@@ -733,9 +766,60 @@ footer {
     display: flex;
     flex-direction: row;
   }
+  .form {
+    width: 50%;
+  }
+  .form-p p {
+    width: 100%;
+    font-weight: 500;
+  }
+  .form-end input {
+    width: 360px;
+    height: 40px;
+  }
+  .privacy-policy input {
+    width: 16px;
+    height: 16px;
+  }
+  .comment textarea {
+    width: 360px;
+  }
+  .social-wrapper .social:hover {
+    background-color: green;
+  }
+  .normal {
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  .normal img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .normal .hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #404bbf;
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 250ms ease;
+  }
+  .normal:hover .hover {
+    transform: translateY(0);
+  }
+
+  .menu li.active a::after {
+    width: 100%;
+  }
 }
 
-@media (width >= 1158px) {
+@media (min-width: 1158px) {
   header {
     margin: 0 auto;
     max-width: 100%;
@@ -823,5 +907,59 @@ footer {
   .privacy-policy input {
     width: 16px;
     height: 16px;
+  }
+  .social-wrapper .social:hover {
+    background-color: green;
+  }
+  .normal {
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  .normal img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .normal .hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #404bbf;
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 250ms ease;
+  }
+  .normal:hover .hover {
+    transform: translateY(0);
+  }
+
+  .menu li.active a::after {
+    width: 100%;
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: url(../images/people2x.png);
+    background-color: #2e2f42;
+    z-index: 1;
+  }
+}
+
+@media (min-resolution: 3dppx) and (min-width: 320px) {
+  .hero {
+    background-image: url(../images/people3x.png);
+  }
+}
+
+@media (min-resolution: 1dppx) and (min-width: 1158px) {
+  .hero {
+    background-image: url(../images/people.png);
+    background-color: #2e2f42;
   }
 }
